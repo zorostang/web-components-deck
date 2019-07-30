@@ -34,7 +34,7 @@
     <meta name="msapplication-TileColor" content="#3880ff">
     <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#3880ff">
-
+    <script type="module" src="http://10.57.165.17:3333/build/stencil-fortune.esm.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', async () => {
@@ -250,6 +250,7 @@
                         <ion-item style="--color: var(--ion-color-dark);">
                             <ion-label text-wrap>• How to publish and pull from NPM. Manage multiple versions of 1 component</ion-label>
                         </ion-item>
+                        <fortune-teller />
                     </ion-list>
                 </deckgo-slide-content>
 
