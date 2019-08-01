@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+
+    <base href="/" />
+
+    <title>A Modern Web Component Delivery Framework</title>
+
+    <meta property="og:site_name" content="A Modern Web Component Delivery Framework">
+    <meta property="og:title" content="A Modern Web Component Delivery Framework">
+
+    <meta name="author"
+        content="Using Stenciljs and NPM to build and deliver web components to any team, any framework, at lightning speed">
+
+    <meta name="description"
+        content="Using Stenciljs and NPM to build and deliver web components to any team, any framework, at lightning speed">
+    <meta property="og:description"
+        content="Using Stenciljs and NPM to build and deliver web components to any team, any framework, at lightning speed">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deckdeckgo.com">
+
+    <meta property="og:image" content="https://deckdeckgo.com/assets/img/deckdeckgo.png">
+    <meta property="og:image:type" content="image/png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#3880ff">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#3880ff">
+    <script type="module" src="http://10.57.165.17:3333/build/stencil-fortune.esm.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', async () => {
+                try {
+                    await navigator.serviceWorker.register('service-worker.js');
+                } catch (e) {
+                    console.warn('No service worker registered');
+                }
+            });
+        }
+    </script>
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <style>
+        /* Until Web Components are loaded, don't display content */
+        body {
+            background: #3880ff;
+        }
+
+        ion-app.loading,
+        ion-app.loading a {
+            color: transparent;
+        }
+
+        ion-app.loading a {
+            color: transparent;
+        }
+
+        ion-app.loading {
+            display: none;
+        }
+
+        .banksyStencil {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .quoteJob {
+            font-size: .6em;
+        }
+
+        .logo {
+            height: 100px;
+        }
+
+        .flexContainer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            justify-items: space-between;
+        }
+
+        .arm {
+            font-size: 100px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .full-width {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <ion-app class="loading">
+        <ion-content force-overscroll="false" scroll-y="false">
+            <deckgo-deck id="slider" pager-percentage="false">
+
+                <!-- BEGIN: Edit your slides -->
+
+                <deckgo-slide-title>
+                    <h1 slot="title">A Modern Web Component Delivery Framework</h1>
+                    <div no-shadow slot="content">
+                        <h3>Using Stenciljs and NPM to build and deliver web components to any team, any framework, at
+                            lightning speed ⚡</h3>
+                    </div>
+                </deckgo-slide-title>
+
+                <deckgo-slide-content
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <h2 slot="title">What</h2>
+                    <ion-list slot="content" lines="none" padding-top>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Build Native Web Components that are supported by all browsers (ie &
+                                edge with polyfills)</ion-label>
+                        </ion-item>
+
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Publish your components to private Accenture scoped Org</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </deckgo-slide-content>
+
+
+                <!-- Background -->
+                <deckgo-slide-split
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <ion-list slot="start" lines="none" padding-top>
+                        <h2 slot="title">Background</h2>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Web Components</ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Design Systems</ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• What is Ionic?</ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Why did they build Stencil?</ion-label>
+                        </ion-item>
+                    </ion-list>
+                    <ion-list slot="end" lines="none">
+                        <ion-item>
+                            <ion-img class="definition" src="assets/img/definition.png"
+                                style="width:100%; margin: 10px"></ion-img>
+                            <ion-label></ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-img class="banksyStencil" src="assets/img/banksy.jpg" style="width:100%; margin: 10px">
+                            </ion-img>
+                            <ion-label></ion-label>
+                        </ion-item>
+                    </ion-list>
+                </deckgo-slide-split>
+                <!-- END Background-->
+
+                <deckgo-slide-content
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <h2 slot="title">Why</h2>
+                    <ion-list slot="content" lines="none" padding-top>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>Framework Agnostic</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-thumbnail slot="start">
+                                <ion-img src="assets/img/angular-icon.png"></ion-img>
+                            </ion-thumbnail>
+                            <ion-label>Angular</ion-label>
+                            <ion-thumbnail slot="start">
+                                <ion-img src="assets/img/react-icon.png"></ion-img>
+                            </ion-thumbnail>
+                            <ion-label>React</ion-label>
+                            <ion-thumbnail slot="start">
+                                <ion-img src="assets/img/vue-icon.png"></ion-img>
+                            </ion-thumbnail>
+                            <ion-label>Vue</ion-label>
+                            <ion-thumbnail slot="start">
+                                <ion-img src="assets/img/html-icon.png"></ion-img>
+                            </ion-thumbnail>
+                            <ion-label>Vanilla HTML/JS</ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Improves developer onboarding by <b>10x</b> because they can
+                                immediately deliver feature rich components without the need for client/project specific
+                                environment setup</ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• This in turn improves project resource management by allowing PM’s
+                                and architects to focus on component specifications and allows developers to focus on
+                                implementation</ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Using NPM is the only way to make components easily indexed and
+                                consumed in projects with just one command (+ it's a tool all developers are already
+                                innately familiar with)</ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Great option for creating a <b>Design System.</b> </ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Adds flexibility around team management. Ability to align teams into
+                                functional verticals. </ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Very useful when a component with "complex" functionality is required
+                                to be used across several applications. </ion-label>
+                        </ion-item>
+                    </ion-list>
+                </deckgo-slide-content>
+
+                <!-- Micro-Frontends -->
+                <deckgo-slide-content
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <h2 slot="title">Micro-Frontends</h2>
+                    <ion-list slot="content" lines="none" padding-top>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>Traditional monolith Front End Application is difficult to break up
+                                into parallel tracks of work.</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-img src="assets/img/monolith-frontback-microservices.png" style="width:1050px">
+                            </ion-img>
+                            <ion-label>Monolith</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </deckgo-slide-content>
+
+                <deckgo-slide-content
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <h2 slot="title">Micro-Frontends</h2>
+                    <ion-list slot="content" lines="none" padding-top>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>Break up teams into verticals aligned with a mission and outcome.
+                            </ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-img src="assets/img/verticals-headline.png" style="width:950px"></ion-img>
+                            <ion-label>Verticals</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </deckgo-slide-content>
+
+                <deckgo-slide-content
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <h2 slot="title">Micro-Frontends</h2>
+                    <ion-list slot="content" lines="none" padding-top>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>Assign sections of the page to full stack team</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-img src="assets/img/three-teams.png" style="width:950px"></ion-img>
+                            <ion-label>Three "Teams"</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </deckgo-slide-content>
+                <!-- END Micro-Frontends -->
+
+                <deckgo-slide-content
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <h2 slot="title" style="margin:none">How</h2>
+                    <ion-list slot="content" lines="none">
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>Stenciljs only requires some jsx and modern ES6 Javascript knowledge.
+                                With its gradual learning curve, developers can onramp smoothly and seamlessly.
+                            </ion-label>
+                        </ion-item>
+                        <img src="assets/img/stencil-cmp.png" style="width:500px;height:500px" />
+                    </ion-list>
+                </deckgo-slide-content>
+
+                <deckgo-slide-content
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <h2 style="margin:none;padding:none" slot="title">How (Continued)</h2>
+                    <ion-list slot="content" lines="none">
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>The integratation team can simply include the web component, as an ES
+                                module, into any framework with just two lines of code after it is published to npm. We
+                                also have the flexibility to import the component through the browser with a script tag.
+                                Stencil takes care of the dynamic loading of each component with the later.
+                            </ion-label>
+                        </ion-item>
+                        <img src="assets/img/stencil-cmp-2.png" style="width:45vw;" />
+                        <img src="assets/img/stencil-cmp-3.png" style="width:44vw;float:right;" />
+                    </ion-list>
+                </deckgo-slide-content>
+
+                <!-- Browser Support  -->
+                <deckgo-slide-split
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <ion-list slot="start" lines="none" padding-top>
+                        <h2 slot="title">Browser Support</h2>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>Stencil automatically adds all polyfills that might be requried in the
+                                browser.</ion-label>
+                        </ion-item>
+                        <figure>
+                            <figcaption>- Adam Bradley<br><span class='quoteJob'>Co-creator of Ionic Framework and
+                                    StencilJS</span></figcaption>
+                            <audio controls src="assets/audio/bradley-clip.m4a">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                            </audio>
+                        </figure>
+
+                    </ion-list>
+                    <ion-list slot="end" lines="none">
+                        <ion-item>
+                            <ion-img class="" src="assets/img/browsersupport.png" style="width:100%; margin: 10px">
+                            </ion-img>
+                            <ion-label></ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-img class="" src="assets/img/browsersupportdetail.png"
+                                style="width:100%; margin: 10px"></ion-img>
+                            <ion-label></ion-label>
+                        </ion-item>
+                    </ion-list>
+                </deckgo-slide-split>
+                <!-- END Browser Support -->
+
+                <!-- Developer Experience  -->
+                <deckgo-slide-split
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <ion-list slot="start" lines="none" padding-top>
+                        <h2 slot="title">Developer Experience</h2>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• It can be cumbersome to write vanilla web components.</ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Stencil gives us a way nicer syntax that enables developers to write
+                                web components in a more convenient and error-safe way.</ion-label>
+                        </ion-item>
+
+
+                    </ion-list>
+                    <ion-list class="full-width" slot="end" lines="none">
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• With JSX, you don't have to worry about whether something is an
+                                attribute or a property of a web component.</ion-label>
+                        </ion-item>
+
+                        <div class="flexContainer">
+                            <ion-img class="logo" src="assets/img/typescriptlogo.png"></ion-img>
+                            <p>+</p>
+                            <ion-img class="logo" src="assets/img/jsxlogo.png"></ion-img>
+                            <p>=</p>
+                            <p class="arm"> 💪</p>
+                        </div>
+                    </ion-list>
+                </deckgo-slide-split>
+                <!-- END Developer Experience -->
+
+                <deckgo-slide-content
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <h2 slot="title">Summary and Demos</h2>
+                    <ion-list slot="content" lines="none" padding-top>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>We will showcase 4 individual demos that demostrate web components
+                                integrated into:</ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Angular -- Realtime Crypto currency ticker using websockets
+                            </ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• React -- Search input form using font awesome and date picker
+                            </ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• Plain HTML -- Leaflet map consuming third-party fetch component to
+                                get live divvy station locations</ion-label>
+                        </ion-item>
+                        <ion-item style="--color: var(--ion-color-dark);">
+                            <ion-label text-wrap>• How to publish and pull from NPM. Manage multiple versions of 1
+                                component</ion-label>
+                        </ion-item>
+                        <fortune-teller />
+                    </ion-list>
+                </deckgo-slide-content>
+
+                <deckgo-slide-content
+                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <h2 slot="title">Thanks</h2>
+                    <ion-list slot="content" lines="none" padding-top>
+                        <figure>
+                            <figcaption>- Ravi Srinivas<br><span class="quoteJob">Engineering Manager at Netflix</span>
+                            </figcaption>
+                            <audio controls src="assets/audio/ravi-clip.m4a">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                            </audio>
+                        </figure>
+
+                    </ion-list>
+                </deckgo-slide-content>
+
+                <!-- END: Edit your slides -->
+
+                <a href="#" onclick="openMenu(event)" slot="actions" style="color: inherit;">
+                    <ion-icon name="more"></ion-icon>
+                </a>
+
+            </deckgo-deck>
+
+            <deckgo-remote></deckgo-remote>
+
+        </ion-content>
+
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation">
+            <ion-fab-button color="primary" size="small" onclick="previousSlide()">
+                <ion-icon name="arrow-back" ariaLabel="Previous slide" style="font-size: 1.4em;"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="primary" size="small" onclick="nextSlide()">
+                <ion-icon name="arrow-forward" ariaLabel="Next slide" style="font-size: 1.4em;"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="primary" size="small" onclick="presentSlidePicker()">
+                <ion-icon name="list" md="md-list" ios="md-list" ariaLabel="Jump to a particular slide"
+                    style="font-size: 1.4em;"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button class="hide-on-mobile" color="primary" size="small" onclick="toggleFullScreen()">
+                <ion-icon name="expand" ariaLabel="Full screen" style="font-size: 1.4em;"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+
+        <!-- Ionic components anchors -->
+        <ion-popover-controller></ion-popover-controller>
+        <ion-modal-controller></ion-modal-controller>
+        <ion-alert-controller></ion-alert-controller>
+
+        <web-social-share show="false" style="--web-social-share-backdrop-opacity: 0.5;">
+            <ion-icon name="logo-twitter" ariaLabel="Twitter" slot="twitter"
+                style="color: #00aced; width: 1.4rem; height: 1.4rem;"></ion-icon>
+            <ion-icon name="logo-reddit" ariaLabel="Reddit" slot="reddit" style="width: 1.4rem; height: 1.4rem;">
+            </ion-icon>
+            <ion-icon name="logo-linkedin" ariaLabel="Linkedin" slot="linkedin"
+                style="color: #0077b5; width: 1.4rem; height: 1.4rem;"></ion-icon>
+            <ion-icon name="mail" slot="email" ariaLabel="Email" style="color: #ff8ea3; width: 1.4rem; height: 1.4rem;">
+            </ion-icon>
+            <ion-icon name="logo-whatsapp" ariaLabel="WhatsApp" slot="whatsapp"
+                style="color: #25D366; width: 1.4rem; height: 1.4rem;"></ion-icon>
+        </web-social-share>
+    </ion-app>
+
+    <noscript>
+        Please enable Javascript to access this presentation.
+    </noscript>
+
+<script src="main.bdca48b69780a4e9a6be.js?30707af80aedc3cb3bb7"></script></body>
+
+</html>
