@@ -286,10 +286,10 @@
                     </ion-list>
                 </deckgo-slide-content>
 
-                <deckgo-slide-content
-                    style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                <deckgo-slide-split
+                style="--background: white; --color: var(--ion-color-tertiary); --ion-item-background: white;">
+                    <ion-list slot="start" lines="none" padding-top>
                     <h2 style="margin:none;padding:none" slot="title">How (Continued)</h2>
-                    <ion-list slot="content" lines="none">
                         <ion-item style="--color: var(--ion-color-dark);">
                             <ion-label text-wrap>The integratation team can simply include the web component, as an ES
                                 module, into any framework with just two lines of code after it is published to npm. We
@@ -297,10 +297,12 @@
                                 Stencil takes care of the dynamic loading of each component with the later.
                             </ion-label>
                         </ion-item>
+                    </ion-list>
+                    <ion-list slot="end" lines="none" padding-top></ion-list>
                         <img src="assets/img/stencil-cmp-2.png" style="width:45vw;" />
                         <img src="assets/img/stencil-cmp-3.png" style="width:44vw;float:right;" />
                     </ion-list>
-                </deckgo-slide-content>
+                </deckgo-slide-split>
 
                 <!-- Browser Support  -->
                 <deckgo-slide-split
